@@ -5,7 +5,7 @@ function convertirACamelCase(texto: string): string {
 
   let indice: number = 0;
   while (indice < textoLocal.length) {
-    if (textoLocal[indice] == "") {
+    if (textoLocal[indice] === " ") {
       vbleCamelCase += textoLocal[indice + 1].toUpperCase();
       indice += 2;
     } else {
@@ -17,7 +17,7 @@ function convertirACamelCase(texto: string): string {
 }
 
 let texto: string = prompt("Ingrese el texto a convertir a CamelCase : ");
-while (texto != "") {
+while (texto !== "") {
   console.log(convertirACamelCase(texto));
   texto = prompt("Ingrese el texto a convertir a CamelCase : ");
 }
